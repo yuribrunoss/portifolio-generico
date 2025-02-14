@@ -1,5 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+:root {
+
+    --cor-principal:    #000000;
+    --cor-secundaria:   #F6F6F6;
+    --cor-terciaria:    #22D4FD;
+    --cor-hover:        #272727;   
+    
+    --fonte-primaria:   'Krona One', sans-serif;
+    --fonte-secundaria: 'Montserrat', sans-serif;
+
+}
+
 * {
 
     margin: 0;
@@ -9,22 +21,40 @@
 
 body {
     
-    /* height: 100vh; */
     box-sizing: border-box;
-    background-color: #000000;
-    color: #f6f6f6;
+    background-color:   var(--cor-principal);
+    color: var(--cor-secundaria);
         
 }
 
-.titulo-destaque {
-    
-    color: #22D4FD;
+.cabecalho {
+
+    padding: 2% 0 0 15%;
+
+}
+
+.cabecalho__menu{
+
+    display: flex;
+    gap: 80px;
+
+}
+
+.cabecalho__menu--link {
+
+    font-family: var(--fonte-secundaria);
+    font-size: 24px;
+    font-weight: 600;
+
+    color: var(--cor-terciaria);
+    text-decoration: none;
+
 
 }
 
 .apresentacao {
 
-    padding: 8% 15%;                                    /*  */
+    padding: 5% 15%;                                    /* Informando a distancia de um elemento para a borda */
     display: flex;                                      /* coloca os quadrados lado a lado */      
     align-items: center;
     justify-content: space-between;
@@ -43,14 +73,20 @@ body {
 .apresentacao__conteudo--titulo {
 
     font-size: 36px;
-    font-family: "Krona One", sans-serif;
+    font-family: var(--fonte-primaria);
+
+}
+
+.titulo-destaque {
+    
+    color: var(--cor-terciaria);
 
 }
 
 .apresentacao__conteudo--texto {
 
+    font-family: var(--fonte-secundaria);
     font-size: 24px;
-    font-family: "Montserrat", sans-serif;
 
 
 }
@@ -67,7 +103,7 @@ body {
 
 .apresentacao__links--subtitulo{
 
-    font-family: "Krona One", sans-serif;               /*  Informando qual fonte esta sendo utilizada */
+    font-family: var(--fonte-primaria);                 /*  Informando qual fonte esta sendo utilizada */
     font-weight: 400;                                   /*  Informando qual o modelo dessa fonte que queremos */
     font-size: 24px;                                    /*  Informando o tamanho da fonte */
 
@@ -76,8 +112,7 @@ body {
 
 .apresentacao__links--link {
 
-    /* background-color: #22D4FD; */                    /* Informando a cor de fundo de um elemento   */
-    border: 2px solid #22D4FD;                        /* Estamos adicionando a borda e informando a largura, estilo e cor */     
+    border: 2px solid var(--cor-terciaria);             /* Estamos adicionando a borda e informando a largura, estilo e cor */     
     width: 378px;                                       /* Informando o tamanho do preenchimento do botão  */
     border-radius: 8px;                                 /* Informando o arredondamento para as bordas */
     display: flex;                                      /* Informando os tipos de exibição internos e externos de um elemento */
@@ -89,12 +124,12 @@ body {
     text-align: center;                                 /* Informando qual alinhamento desejado no texto */
     text-decoration: none;                              /* Informando a aparência de linhas decorativas no texto */ 
     
-    font-family: "Montserrat", sans-serif;              /* Informando a fonte desejada e sua familia genérica */
+    font-family: var(--fonte-secundaria);               /* Informando a fonte desejada e sua familia genérica */
     font-optical-sizing: auto;                          /* Informando se a renderização de texto é otimizada para visualização em tamanhos diferentes */
     font-weight: 600;                                   /* Informando qual peso ou a intensidade da fonte que desejamos utilizar */    
     font-style: normal;                                 /* Informando o estilo da fonte */    
     font-size: 24px;                                    /* Informando o tamanho da fonte */
-    color: #f6f6f6;                                   /* Informando a cor da fonte*/  
+    color: var(--cor-secundaria);                       /* Informando a cor da fonte*/  
 
 }
 
@@ -110,13 +145,13 @@ body {
     padding: 24px;
 
     text-align: center;
-    font-family: "Montserrat", sans-serif;
+    font-family: var(--fonte-secundaria);
     font-size: 24px;
     font-weight: 400;
 
 
     
-    background-color: #22D4FD;                      /**/
-    color: #000000;
+    background-color: var(--cor-terciaria);                      /* Informando a cor de fundo de um elemento */
+    color: var(--cor-principal);
 
 }
