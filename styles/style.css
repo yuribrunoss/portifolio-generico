@@ -43,7 +43,7 @@ body {
 .cabecalho__menu--link {
 
     font-family: var(--fonte-secundaria);
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 600;
 
     color: var(--cor-terciaria);
@@ -63,7 +63,7 @@ body {
 
 .apresentacao__conteudo {
 
-    width: 615px;
+    width: 50%;
     display: flex;                                      /* coloca os quadrados lado a lado */
     flex-direction: column;
     gap: 40px;                                          /* adiciona espaços iguais entre cada quadrado */
@@ -72,7 +72,7 @@ body {
 
 .apresentacao__conteudo--titulo {
 
-    font-size: 36px;
+    font-size: 2.25rem;
     font-family: var(--fonte-primaria);
 
 }
@@ -86,7 +86,7 @@ body {
 .apresentacao__conteudo--texto {
 
     font-family: var(--fonte-secundaria);
-    font-size: 24px;
+    font-size: 1.5rem;
 
 
 }
@@ -105,15 +105,15 @@ body {
 
     font-family: var(--fonte-primaria);                 /*  Informando qual fonte esta sendo utilizada */
     font-weight: 400;                                   /*  Informando qual o modelo dessa fonte que queremos */
-    font-size: 24px;                                    /*  Informando o tamanho da fonte */
+    font-size: 1.5rem;                                  /*  Informando o tamanho da fonte */
 
 }
 
 
-.apresentacao__links--link {
+.apresentacao__links--navegacao {
 
     border: 2px solid var(--cor-terciaria);             /* Estamos adicionando a borda e informando a largura, estilo e cor */     
-    width: 378px;                                       /* Informando o tamanho do preenchimento do botão  */
+    width: 50%;                                       /* Informando o tamanho do preenchimento do botão  */
     border-radius: 8px;                                 /* Informando o arredondamento para as bordas */
     display: flex;                                      /* Informando os tipos de exibição internos e externos de um elemento */
     justify-content: center;                            /* controla o posicionamento dos elementos filhos ao longo do eixo principal */
@@ -128,14 +128,20 @@ body {
     font-optical-sizing: auto;                          /* Informando se a renderização de texto é otimizada para visualização em tamanhos diferentes */
     font-weight: 600;                                   /* Informando qual peso ou a intensidade da fonte que desejamos utilizar */    
     font-style: normal;                                 /* Informando o estilo da fonte */    
-    font-size: 24px;                                    /* Informando o tamanho da fonte */
+    font-size: 1.5rem;                                  /* Informando o tamanho da fonte */
     color: var(--cor-secundaria);                       /* Informando a cor da fonte*/  
 
 }
 
 .apresentacao__links--link:hover{
 
-    background-color: #272727;
+    background-color: var(--cor-hover);
+
+}
+
+.apresentacao__imagem {
+
+    width: 50%;
 
 }
 
@@ -146,12 +152,42 @@ body {
 
     text-align: center;
     font-family: var(--fonte-secundaria);
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 400;
 
 
     
     background-color: var(--cor-terciaria);                      /* Informando a cor de fundo de um elemento */
     color: var(--cor-principal);
+
+}
+
+@media (max-width: 1200px) {
+    
+    .cabecalho {
+
+        padding: 10%;
+        
+    }
+
+    .cabecalho__menu {
+
+        justify-content: center;
+
+    }
+
+
+    .apresentacao {
+
+        flex-direction: column-reverse;
+        padding: 5%;
+
+    }
+
+    .apresentacao__conteudo {
+
+        width: auto;
+
+    }
 
 }
